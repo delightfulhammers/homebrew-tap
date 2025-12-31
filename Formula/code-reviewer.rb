@@ -5,13 +5,13 @@
 class CodeReviewer < Formula
   desc "AI-powered code review tool with multi-provider LLM support"
   homepage "https://github.com/bkyoung/code-reviewer"
-  version "0.6.1"
+  version "0.6.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bkyoung/code-reviewer/releases/download/v0.6.1/code-reviewer_0.6.1_darwin_amd64.tar.gz"
-      sha256 "0cbde0c97b94f74790ed882ad0914ed3f43b5611ed359880240df8c581249b85"
+      url "https://github.com/bkyoung/code-reviewer/releases/download/v0.6.2/code-reviewer_0.6.2_darwin_amd64.tar.gz"
+      sha256 "af76a7f17d18930228dd7c20a798f37950fc6e2bc3eac5b91dd56987d47683bf"
 
       def install
         bin.install "cr"
@@ -19,8 +19,8 @@ class CodeReviewer < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bkyoung/code-reviewer/releases/download/v0.6.1/code-reviewer_0.6.1_darwin_arm64.tar.gz"
-      sha256 "ac0ff449c3b0f59d5038c706cb4573f1d76ed45ec2c6d0c048e66837f1d8b74a"
+      url "https://github.com/bkyoung/code-reviewer/releases/download/v0.6.2/code-reviewer_0.6.2_darwin_arm64.tar.gz"
+      sha256 "8b1fee933da5699b761cfbfa3a1039cd5ed127e3ad671baf2a094a43146f71d8"
 
       def install
         bin.install "cr"
@@ -31,16 +31,16 @@ class CodeReviewer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bkyoung/code-reviewer/releases/download/v0.6.1/code-reviewer_0.6.1_linux_amd64.tar.gz"
-      sha256 "a824eaa72bcc13889be72255b72bc8f56d8e0a585c293da27b7296731e31cac5"
+      url "https://github.com/bkyoung/code-reviewer/releases/download/v0.6.2/code-reviewer_0.6.2_linux_amd64.tar.gz"
+      sha256 "7515174ec25a9e9710e201bafbdede29855d81f3b55449e83e5b6305e1840c65"
       def install
         bin.install "cr"
         bin.install "code-reviewer-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bkyoung/code-reviewer/releases/download/v0.6.1/code-reviewer_0.6.1_linux_arm64.tar.gz"
-      sha256 "f501b0c7145f6bfa8b1592abd78b45c7811be69e5056bebfa9b770f80908e601"
+      url "https://github.com/bkyoung/code-reviewer/releases/download/v0.6.2/code-reviewer_0.6.2_linux_arm64.tar.gz"
+      sha256 "86e2a6c534c4b2c17c2dfcf1706852254c2425e31f57975d126a0aeeeb363e26"
       def install
         bin.install "cr"
         bin.install "code-reviewer-mcp"
