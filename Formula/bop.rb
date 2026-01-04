@@ -5,45 +5,45 @@
 class Bop < Formula
   desc "AI-powered code review tool with multi-provider LLM support"
   homepage "https://github.com/delightfulhammers/bop"
-  version "0.7.0"
+  version "0.7.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.7.0/code-reviewer_0.7.0_darwin_amd64.tar.gz"
-      sha256 "95582149b3b1adb51c5dab43884e8fd2cb7c0be8db3c4d81a158186fe8392d1f"
+      url "https://github.com/delightfulhammers/bop/releases/download/v0.7.1/bop_0.7.1_darwin_amd64.tar.gz"
+      sha256 "86c7cb584bf2eb41cf8597c9691c58e97bc4e75f39d34a6d66867b3eaf28a5c2"
 
       def install
-        bin.install "cr" => "bop"
-        bin.install "code-reviewer-mcp" => "bop-mcp"
+        bin.install "bop"
+        bin.install "bop-mcp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.7.0/code-reviewer_0.7.0_darwin_arm64.tar.gz"
-      sha256 "87f1535214963de6901df9e45901d8c9ee35c6e6063916fca9e7e2049016bbb9"
+      url "https://github.com/delightfulhammers/bop/releases/download/v0.7.1/bop_0.7.1_darwin_arm64.tar.gz"
+      sha256 "944ac67ccb0ec793df569ba8d7990d84e7e4f750f17b9b9202289f6761d60dd2"
 
       def install
-        bin.install "cr" => "bop"
-        bin.install "code-reviewer-mcp" => "bop-mcp"
+        bin.install "bop"
+        bin.install "bop-mcp"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.7.0/code-reviewer_0.7.0_linux_amd64.tar.gz"
-      sha256 "8bb2068d75a74b6fe3b6f5b356d38674beea0d00b3f9b18ffa3b5d8a19c7e380"
+      url "https://github.com/delightfulhammers/bop/releases/download/v0.7.1/bop_0.7.1_linux_amd64.tar.gz"
+      sha256 "c5b3b6d2c4eecc7a74c6d6658b3f60559d9088180098259b8108e86ea8145fdf"
       def install
-        bin.install "cr" => "bop"
-        bin.install "code-reviewer-mcp" => "bop-mcp"
+        bin.install "bop"
+        bin.install "bop-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.7.0/code-reviewer_0.7.0_linux_arm64.tar.gz"
-      sha256 "b601ffccf347b7466d6565c2862b7ebd1cc2091e1779ed4327f3c8f84fa634e7"
+      url "https://github.com/delightfulhammers/bop/releases/download/v0.7.1/bop_0.7.1_linux_arm64.tar.gz"
+      sha256 "db4ef0394e5263f9a12e0bdd69f606e2c8c18ff95cc64daac61c04b71023b960"
       def install
-        bin.install "cr" => "bop"
-        bin.install "code-reviewer-mcp" => "bop-mcp"
+        bin.install "bop"
+        bin.install "bop-mcp"
       end
     end
   end
