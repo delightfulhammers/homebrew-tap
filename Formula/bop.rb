@@ -11,7 +11,7 @@ class Bop < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/delightfulhammers/bop/releases/download/v0.8.4/bop_0.8.4_darwin_amd64.tar.gz"
-      sha256 "d55106d1ee719f69828d447647c2a21f245a6da61c262ea07ca8a02f61b5d132"
+      sha256 "4ef1f77bc7639482956fc9a70fcfec3f6061ac9aa36afcac3b386f265d459222"
 
       def install
         bin.install "bop"
@@ -20,7 +20,7 @@ class Bop < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/delightfulhammers/bop/releases/download/v0.8.4/bop_0.8.4_darwin_arm64.tar.gz"
-      sha256 "36d10e232fcd55cad2d85a1f11f249b5968474042ed1e4a26e0906275b8764fa"
+      sha256 "a6296651a918896f2dd7e653405c350e46225827678af10e7aaa709397b87284"
 
       def install
         bin.install "bop"
@@ -32,7 +32,7 @@ class Bop < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/delightfulhammers/bop/releases/download/v0.8.4/bop_0.8.4_linux_amd64.tar.gz"
-      sha256 "d951333f3ceb59c0ce5660708579293a252ba4c3eae7400489c9fb73e976c187"
+      sha256 "b481c2ac1be70fa32b1930fefecde26b77acb5662d48341bd362a055f4ed13db"
       def install
         bin.install "bop"
         bin.install "bop-mcp"
@@ -40,7 +40,7 @@ class Bop < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/delightfulhammers/bop/releases/download/v0.8.4/bop_0.8.4_linux_arm64.tar.gz"
-      sha256 "b2020e72701257b3118b6ef0cb99922b6f1c97a4f81ab185e4a7635629245857"
+      sha256 "8368c9c3198853126525027503445e1df908cc907c3d93d02fce1fb91d9d8557"
       def install
         bin.install "bop"
         bin.install "bop-mcp"
