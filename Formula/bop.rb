@@ -5,13 +5,13 @@
 class Bop < Formula
   desc "AI-powered code review tool with multi-provider LLM support"
   homepage "https://github.com/delightfulhammers/bop"
-  version "0.9.1"
+  version "0.9.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.1/bop_0.9.1_darwin_amd64.tar.gz"
-      sha256 "7a2cea7788c4475300dff7fe0306411fbff36a72cd18f4e02bd02e1ab3e7dd64"
+      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.2/bop_0.9.2_darwin_amd64.tar.gz"
+      sha256 "8e912d988e92210089665967eafd49bfdf183934aad78e45269bf640af5e2918"
 
       def install
         bin.install "bop"
@@ -19,8 +19,8 @@ class Bop < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.1/bop_0.9.1_darwin_arm64.tar.gz"
-      sha256 "cf1048a69f280009cace0331c60cfeb49cedebf3b8ded355ece0645d66fbb58c"
+      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.2/bop_0.9.2_darwin_arm64.tar.gz"
+      sha256 "7f3574bf9dbd65e10d03bff2d740c038f23804b32adb2d2c8b142b7ef345ee3b"
 
       def install
         bin.install "bop"
@@ -31,16 +31,16 @@ class Bop < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.1/bop_0.9.1_linux_amd64.tar.gz"
-      sha256 "9293619a53961b7f08da230e86276410236f673737b189a17b38a7dcaa4556dd"
+      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.2/bop_0.9.2_linux_amd64.tar.gz"
+      sha256 "8b1e60dd7472750949c9e55c6fc2d221c9a91790fb7b22d1c306aa3d0229ecfa"
       def install
         bin.install "bop"
         bin.install "bop-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.1/bop_0.9.1_linux_arm64.tar.gz"
-      sha256 "d845c870632d3b60166dc626e7a975538ad220ccd5cbba1f2b2b0ba033298156"
+      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.2/bop_0.9.2_linux_arm64.tar.gz"
+      sha256 "7613ef6976e088698bed3a4211de216b14de4b371fbaa98897c982c49ee62a3f"
       def install
         bin.install "bop"
         bin.install "bop-mcp"
@@ -58,9 +58,10 @@ class Bop < Formula
       Quick start:
         bop review branch main
 
-      For GitHub PR integration:
+      Review a GitHub PR (with posting):
         export GITHUB_TOKEN="your-token"
-        bop review branch main --github-post --pr 123
+        bop review pr owner/repo#123 --post
+        bop review pr 123 --post              # Infers owner/repo from git remote
     EOS
   end
 
