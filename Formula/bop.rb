@@ -5,13 +5,13 @@
 class Bop < Formula
   desc "AI-powered code review tool with multi-provider LLM support"
   homepage "https://github.com/delightfulhammers/bop"
-  version "0.9.2"
+  version "0.9.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.2/bop_0.9.2_darwin_amd64.tar.gz"
-      sha256 "8e912d988e92210089665967eafd49bfdf183934aad78e45269bf640af5e2918"
+      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.3/bop_0.9.3_darwin_amd64.tar.gz"
+      sha256 "17dffdde6556b8323071f807165af85aab01d8875c9fec12c5cd0a045072f57d"
 
       def install
         bin.install "bop"
@@ -19,8 +19,8 @@ class Bop < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.2/bop_0.9.2_darwin_arm64.tar.gz"
-      sha256 "7f3574bf9dbd65e10d03bff2d740c038f23804b32adb2d2c8b142b7ef345ee3b"
+      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.3/bop_0.9.3_darwin_arm64.tar.gz"
+      sha256 "9cb965a20ac3cb628bfcc98d2c7baa9be518310da7e1902b4f670ac0f7b45aab"
 
       def install
         bin.install "bop"
@@ -31,16 +31,16 @@ class Bop < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.2/bop_0.9.2_linux_amd64.tar.gz"
-      sha256 "8b1e60dd7472750949c9e55c6fc2d221c9a91790fb7b22d1c306aa3d0229ecfa"
+      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.3/bop_0.9.3_linux_amd64.tar.gz"
+      sha256 "a554bdb4469739b6b3823c74b23ef6c84f8fcd76af11a5485c1a396e2884337b"
       def install
         bin.install "bop"
         bin.install "bop-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.2/bop_0.9.2_linux_arm64.tar.gz"
-      sha256 "7613ef6976e088698bed3a4211de216b14de4b371fbaa98897c982c49ee62a3f"
+      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.3/bop_0.9.3_linux_arm64.tar.gz"
+      sha256 "2ba4dec16bff693b875edd6a9cbfe655f6c34e68a1e003550fb8544ca146ec8a"
       def install
         bin.install "bop"
         bin.install "bop-mcp"
