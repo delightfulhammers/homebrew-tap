@@ -10,8 +10,8 @@ class Bop < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.3/bop_0.9.3_darwin_amd64.tar.gz"
-      sha256 "17dffdde6556b8323071f807165af85aab01d8875c9fec12c5cd0a045072f57d"
+      url "https://github.com/delightfulhammers/homebrew-tap/releases/download/v0.9.3/bop_0.9.3_darwin_amd64.tar.gz"
+      sha256 "12af5cc3fa8b5a9da13ccad2483f2532050c4591ab9b1ae8c012739b0cb6fd5b"
 
       def install
         bin.install "bop"
@@ -19,8 +19,8 @@ class Bop < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.3/bop_0.9.3_darwin_arm64.tar.gz"
-      sha256 "9cb965a20ac3cb628bfcc98d2c7baa9be518310da7e1902b4f670ac0f7b45aab"
+      url "https://github.com/delightfulhammers/homebrew-tap/releases/download/v0.9.3/bop_0.9.3_darwin_arm64.tar.gz"
+      sha256 "dba6f94594871552fb99f2088929a50955e5c831774be66dc086885194481194"
 
       def install
         bin.install "bop"
@@ -31,16 +31,16 @@ class Bop < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.3/bop_0.9.3_linux_amd64.tar.gz"
-      sha256 "a554bdb4469739b6b3823c74b23ef6c84f8fcd76af11a5485c1a396e2884337b"
+      url "https://github.com/delightfulhammers/homebrew-tap/releases/download/v0.9.3/bop_0.9.3_linux_amd64.tar.gz"
+      sha256 "527a1d74e3f070cc27172f1388f17ee222176f5a1aa72e79668e715c4dcf55eb"
       def install
         bin.install "bop"
         bin.install "bop-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/delightfulhammers/bop/releases/download/v0.9.3/bop_0.9.3_linux_arm64.tar.gz"
-      sha256 "2ba4dec16bff693b875edd6a9cbfe655f6c34e68a1e003550fb8544ca146ec8a"
+      url "https://github.com/delightfulhammers/homebrew-tap/releases/download/v0.9.3/bop_0.9.3_linux_arm64.tar.gz"
+      sha256 "379c5e03cbbfd260dd42f77398fd59e1d25992896759e6c25fc9d73e1a386d49"
       def install
         bin.install "bop"
         bin.install "bop-mcp"
