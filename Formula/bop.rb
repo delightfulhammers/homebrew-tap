@@ -5,13 +5,13 @@
 class Bop < Formula
   desc "AI-powered code review tool with multi-provider LLM support"
   homepage "https://github.com/delightfulhammers/bop"
-  version "0.12.4"
+  version "0.12.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/delightfulhammers/homebrew-tap/releases/download/v0.12.4/bop_0.12.4_darwin_amd64.tar.gz"
-      sha256 "69df35be67ec0c4944ff7f3de1f8d80d2c6056d0a136f35aab7931525fbc706e"
+      url "https://github.com/delightfulhammers/homebrew-tap/releases/download/v0.12.5/bop_0.12.5_darwin_amd64.tar.gz"
+      sha256 "0cf0d697ecbed94a525e4959b4c1d23d46c75d0cb13922817b4343b1d1eb5f0b"
 
       define_method(:install) do
         bin.install "bop"
@@ -19,8 +19,8 @@ class Bop < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/delightfulhammers/homebrew-tap/releases/download/v0.12.4/bop_0.12.4_darwin_arm64.tar.gz"
-      sha256 "bfba9009d5a1725cf2256c3938bf915d0ef347bff74e6def37c4684641414c91"
+      url "https://github.com/delightfulhammers/homebrew-tap/releases/download/v0.12.5/bop_0.12.5_darwin_arm64.tar.gz"
+      sha256 "c89e8e3f9fea795cbec9377e94d50ed8a182d909ced7a2b80dd785de55ca22cb"
 
       define_method(:install) do
         bin.install "bop"
@@ -31,16 +31,16 @@ class Bop < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/delightfulhammers/homebrew-tap/releases/download/v0.12.4/bop_0.12.4_linux_amd64.tar.gz"
-      sha256 "5e00744e91bbea651c977df8e7cd4f09258a3989f41a6cefee96ddd94e72c237"
+      url "https://github.com/delightfulhammers/homebrew-tap/releases/download/v0.12.5/bop_0.12.5_linux_amd64.tar.gz"
+      sha256 "e9c83a34041c40d0c7f11445da446b7e6cc52bcf8b9ed2e4e0d3d95305c75088"
       define_method(:install) do
         bin.install "bop"
         bin.install "bop-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/delightfulhammers/homebrew-tap/releases/download/v0.12.4/bop_0.12.4_linux_arm64.tar.gz"
-      sha256 "5076bad80c0fabcd8ad97efc001e086bf358933e0ef86d36b01757edd562475e"
+      url "https://github.com/delightfulhammers/homebrew-tap/releases/download/v0.12.5/bop_0.12.5_linux_arm64.tar.gz"
+      sha256 "6329ad0bcef28d59573053d45921c391c173b2162db7e22e0387e06f4980629b"
       define_method(:install) do
         bin.install "bop"
         bin.install "bop-mcp"
